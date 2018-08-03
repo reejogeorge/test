@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,900");
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #fff;
+}
+
+body {
+  background: #ff6f91;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+h6 {
+  color: #333;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+.tablediv {
+  display: table;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.tablediv .cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #818181;
+  border-radius: 50%;
+  background: #333;
+  margin: 0 auto;
+  font-size: 16px;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  z-index: 92;
+}
+
+.nveMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 320px;
+  height: 100%;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+  -webkit-transform: translateX(-320px);
+          transform: translateX(-320px);
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  padding: 40px 20px;
+}
+.nveMenu.is-opened {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.nveMenu h1 {
+  color: #000;
+  font-weight: 700;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 320px);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.71);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+}
+.overlay.is-on {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navlinks li {
+  display: block;
+  padding: 12px 0;
+}
+.navlinks li a {
+  text-transform: uppercase;
+  color: #666;
+  font-weight: 700;
+}
+.navlinks li a:hover {
+  text-decoration: none;
+}
